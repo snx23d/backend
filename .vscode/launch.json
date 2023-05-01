@@ -5,6 +5,26 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "args": [
+                "--require",
+                "ts-node/register",
+                "-u",
+                "bdd",
+                "--timeout",
+                "999999",
+                "--colors",
+                "${workspaceFolder}/backend_tests_js/tests/*"
+            ],
+            "internalConsoleOptions": "openOnSessionStart",
+            "name": "Mocha Tests",
+            "program": "${workspaceFolder}/backend_tests_js/node_modules/mocha/bin/_mocha",
+            "request": "launch",
+            "skipFiles": [
+                "<node_internals>/**"
+            ],
+            "type": "node"
+        },
+        {
             "command": "npm run app",
             "name": "npm run application",
             "request": "launch",
