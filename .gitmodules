@@ -1,0 +1,3 @@
+[submodule "backend_tests_js"]
+	path = backend_tests_js
+	url = https://github.com/snx23d/backend_tests_js.git
