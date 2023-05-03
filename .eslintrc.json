@@ -3,7 +3,11 @@
         "browser": true,
         "es2021": true
     },
-    "extends": ["plugin:@typescript-eslint/recommended", "eslint:recommended"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
     "parser": "@typescript-eslint/parser",
     "overrides": [
     ],
