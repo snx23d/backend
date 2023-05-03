@@ -13,6 +13,7 @@
                 "--timeout",
                 "999999",
                 "--colors",
+                "--recursive",
                 "${workspaceFolder}/backend_tests_js/tests/*"
             ],
             "internalConsoleOptions": "openOnSessionStart",
