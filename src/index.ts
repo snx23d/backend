@@ -2,8 +2,12 @@ import express from 'express';
 
 const app = express();
 
-const server = app.listen(3000, () =>
-    console.log("Server ready at: http://localhost:3000  http://127.0.0.1:3000")
+const defaultPortNumber = 3000;
+
+const portNumber = (undefined === process.env.PORT_NUMBER) ? defaultPortNumber : parseInt(process.env.PORT_NUMBER);
+
+const server = app.listen(portNumber, () =>
+    console.log(`Server ready at: http://localhost:${portNumber}`)
 );
 
 server.setTimeout(30000);
