@@ -23,3 +23,4 @@ The backend application can be tested using Jenkins pipeline. The pipeline doesn
  it launches the backend server in the background and doesn't kill it after the test suite is finished. 
 Ideally pipeline should build a Docker image of the application and launch it, but I was unable to get Jenkins to talk to
 the parent Docker deamon since Jenkins was run inside the docker container itself. Hence this ugly hack with nohup and sleep.
+
