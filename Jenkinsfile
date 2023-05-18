@@ -29,7 +29,7 @@ pipeline {
         stage('Execute tests') {
             steps {
                 echo '*** Executing tests ***'
-
+                sh 'npm run app'
                 dir("backend_tests_js") {
                     nodejs('Node-18.16.0') {
                         sh 'npm run testLinux'
