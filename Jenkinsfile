@@ -30,7 +30,12 @@ pipeline {
             steps {
                 echo '*** Executing tests ***'
                 nodejs('Node-18.16.0') {
-                    sh 'npm run app'
+                    //start a background process
+                    // https://devops.stackexchange.com/questions/1473/running-a-background-process-in-pipeline-job
+                    withEnv(['JENKINS_NODE_COOKIE=dontkill']) {
+                        sh 'nohup npm run app &'
+                    }
+                    sh 'sleep 10'
                 }
                 dir("backend_tests_js") {
                     nodejs('Node-18.16.0') {
