@@ -5,7 +5,7 @@ simple backend for an AUT
 # Running the application
 
 
-    npm install --production
+    npm install --omit=dev
     npm run app
 
 # git submodule
